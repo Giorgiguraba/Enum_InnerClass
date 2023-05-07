@@ -1,22 +1,20 @@
 package ge.Task;
 
-public class Statics extends Employee{
-    private Employee employee;
-    private Hired hired;
-    private double avvarageSalary;
-    private final double getIttSalary = 3870;
-    private final double getAuditSalary = 870;
-    public Statics(Employee employee, Hired hired){
-        this.employee = employee;
-        this.hired = hired;
-    }
+public class Statics{
 
-    public double getGetIttSalary() {
-        return getIttSalary;
+    private Statics(){}
+    public static void compeareAvvarage(Employee employee){
+        if (employee.getSalary() < employee.getProffesion().getAverageSalary()){
+            double x = employee.getProffesion().getAverageSalary() - employee.getSalary();
+            System.out.println("less then avvarage" + employee.toString() + x);
+        }else if(employee.getSalary() == employee.getProffesion().getAverageSalary()) {
+            System.out.println("avvarage");
+        }else {
+            System.out.println("more then avvarage" + employee.toString());
+        }
     }
-
-    public double getGetAuditSalary() {
-        return getAuditSalary;
+    public static void printSalary(Employee employee){
+        System.out.println(employee.getSalary());
     }
 }
 

@@ -2,14 +2,13 @@ package ge.Task;
 
 public class Main {
     public static void main(String[] args) {
-        Employee giorgi = new Employee("Giorgi", Proffesion.AUDIT);
 
-        Hired hired = new Hired("AGIC", 500);
+        Employee giorgi = new Employee(Proffesion.SOFTWARE_ENGINEER,"girogi", "boy", 300);
 
+        Statics.compeareAvvarage(giorgi);
+        Employee nikush = new Employee(Proffesion.SOFTWARE_ENGINEER,"nikush", "boy", 3000000);
+        Statics.compeareAvvarage(nikush);
 
-        Statics statics = new Statics();
-
-        System.out.println();
         /**
          დაწერეთ მუშის (Employee) კლასი, რომელსაც ექნება შიდა კლასი სახელად Statistic.
          მუშას უნდა ჰქონდეს პროფესიის ენამი ველად. პროფესიის ენმას უნდა გააჩნდეს საშუალო
